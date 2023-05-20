@@ -1,7 +1,7 @@
 use lambda_http::Request;
 
 #[allow(dead_code)]
-fn parse_bearer_token(request_with_header: &Request) -> anyhow::Result<String> {
+pub fn parse_bearer_token(request_with_header: &Request) -> anyhow::Result<String> {
     let authorization = request_with_header
         .headers()
         .get("Authorization")
